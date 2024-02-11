@@ -20,20 +20,13 @@ const generateUniqueId = () => {
     return Date.now().toString(36) + Math.random().toString(36).substr(2, 5);
 };
 
-// Routes
-app.get('/notes', (req, res) => {
-    res.sendFile(path.join(publicPath, 'notes.html'));
-});
-
-app.get('/', (req, res) => {
-    res.sendFile(path.join(publicPath, 'index.html'));
-});
-
+// Get all notes from db.json
 app.get('/api/notes', (req, res) => {
     const notes = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
     res.json(notes);
 });
 
+// Save a new note to db.json
 app.post('/api/notes', (req, res) => {
     const newNote = req.body;
     const notes = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
@@ -45,6 +38,16 @@ app.post('/api/notes', (req, res) => {
     fs.writeFileSync(dbPath, JSON.stringify(notes));
 
     res.json(newNote);
+});
+
+// Serve notes.html for the /notes route
+app.get('/notes', (req, res) => {
+    res.sendFile(path.join(publicPath, 'notes.html'));
+});
+
+// Serve index.html for all other routes
+app.get('*', (req, res) => {
+    res.sendFile(path.join(publicPath, 'index.html'));
 });
 
 // Start the server
