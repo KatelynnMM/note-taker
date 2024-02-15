@@ -1,8 +1,7 @@
-
-
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
+const { v4: uuidv4 } = require('uuid');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -17,11 +16,9 @@ app.use(express.json());
 // Serve static files from the public directory
 app.use(express.static(publicPath));
 
-
-
-// Function to generate a simple unique identifier
+// Function to generate a unique identifier using uuid
 const generateUniqueId = () => {
-    return Date.now().toString(36) + Math.random().toString(36).substr(2, 5);
+    return uuidv4();
 };
 
 // Get all notes from db.json
@@ -39,7 +36,12 @@ app.post('/api/notes', (req, res) => {
     newNote.id = generateUniqueId();
 
     notes.push(newNote);
-    fs.writeFileSync(dbPath, JSON.stringify(notes));
+
+    // Convert notes array to a formatted JSON string with indentation
+    const formattedNotes = JSON.stringify(notes, null, 2);
+
+    // Write the formatted JSON string to the db.json file
+    fs.writeFileSync(dbPath, formattedNotes);
 
     res.json(newNote);
 });

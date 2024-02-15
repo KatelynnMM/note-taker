@@ -1,1 +1,16 @@
-[{"title":"Test Title","text":"Test text"},{"title":"homework","text":"make it work","id":"lsmhn8pdmmy6o"},{"title":"chores","text":"laundry\ndishes\nfloors","id":"lsmhq18fgvoht"},{"title":"shopping","text":"everything cause there is no time","id":"lsmhslq2aq3zw"}]
+[
+  {
+    "title": "Test Title",
+    "text": "Test text"
+  },
+  {
+    "title": "do homework",
+    "text": "due thursday",
+    "id": "6cd9344c-12bc-4abf-8658-5ae115adf39c"
+  },
+  {
+    "title": "make dinner",
+    "text": "pork chops",
+    "id": "eb195b05-b998-4a0d-93f4-a28de7ddb1a3"
+  }
+]
