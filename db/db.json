@@ -4,13 +4,23 @@
     "text": "Test text"
   },
   {
-    "title": "do homework",
-    "text": "due thursday",
-    "id": "6cd9344c-12bc-4abf-8658-5ae115adf39c"
-  },
-  {
     "title": "make dinner",
     "text": "pork chops",
     "id": "eb195b05-b998-4a0d-93f4-a28de7ddb1a3"
+  },
+  {
+    "title": "clean",
+    "text": "everything",
+    "id": "8ec5f759-263f-4f6f-9d96-2228a02117bd"
+  },
+  {
+    "title": "homework",
+    "text": "due thursday",
+    "id": "c8e174a2-ae00-4762-9d31-13823b16bd25"
+  },
+  {
+    "title": "study",
+    "text": "learn heroku",
+    "id": "0446a830-7a52-46d2-9cd2-9f4a26a23788"
   }
 ]
