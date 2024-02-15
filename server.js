@@ -1,3 +1,5 @@
+
+
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
@@ -9,11 +11,13 @@ const PORT = process.env.PORT || 3000;
 const dbPath = path.join(__dirname, 'db/db.json');
 const publicPath = path.join(__dirname, 'public');
 
+// Parse JSON requests
+app.use(express.json());
+
 // Serve static files from the public directory
 app.use(express.static(publicPath));
 
-// Parse JSON requests
-app.use(express.json());
+
 
 // Function to generate a simple unique identifier
 const generateUniqueId = () => {
