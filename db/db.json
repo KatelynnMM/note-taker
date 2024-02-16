@@ -4,11 +4,6 @@
     "text": "Test text"
   },
   {
-    "title": "make dinner",
-    "text": "pork chops",
-    "id": "eb195b05-b998-4a0d-93f4-a28de7ddb1a3"
-  },
-  {
     "title": "clean",
     "text": "everything",
     "id": "8ec5f759-263f-4f6f-9d96-2228a02117bd"
@@ -22,5 +17,15 @@
     "title": "study",
     "text": "learn heroku",
     "id": "0446a830-7a52-46d2-9cd2-9f4a26a23788"
+  },
+  {
+    "title": "school",
+    "text": "figure out heroku",
+    "id": "4d0286a6-c335-459b-92d4-566e331c5f22"
+  },
+  {
+    "title": "cats",
+    "text": "groomer\nliter\nfood",
+    "id": "19752741-88db-428c-a3e7-858e76266eee"
   }
 ]
